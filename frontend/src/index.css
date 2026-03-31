@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Modal animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Upload Modal */
+.upload-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center;
+  animation: fadeIn 0.3s ease forwards;
+}
+.upload-modal-content {
+  @apply bg-white rounded-lg p-6 shadow-lg max-w-lg w-full;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+/* Paste Modal */
+.paste-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center;
+  animation: fadeIn 0.3s ease forwards;
+}
+.paste-modal-content {
+  @apply bg-white rounded-lg p-6 shadow-lg max-w-lg w-full;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+/* Record Modal */
+.record-modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center;
+  animation: fadeIn 0.3s ease forwards;
+}
+.record-modal-content {
+  @apply bg-white rounded-lg p-6 shadow-lg max-w-lg w-full;
+  animation: modalFadeIn 0.3s ease forwards;
+}
